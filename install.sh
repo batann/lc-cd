@@ -435,7 +435,7 @@ echo -e "===================================================================="
 echo -e "          >>>> Enter [ANY] to continue and cleanup ...       "
 tput cup 7 60
 read -n1 lol
-echo "sudo trash $HOME lc-cd-install.sh"|xclip -selection c
+echo "sudo trash $HOME/lc-cd"|xclip -selection c
 clear
 exit
 
