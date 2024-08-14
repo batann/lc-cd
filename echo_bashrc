@@ -1,4 +1,6 @@
 ###   Setup lc function   #######################################################
+# TEST #
+
 unalias lc 2> /dev/null
 lc(){
 	local dest_dir=$(lc-cd-cuts-global-echo | fzf )
