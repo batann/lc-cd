@@ -8,22 +8,22 @@
 #			:	Removes clutter and exits
 #---------------------------------------------------------------------------------------#
 clear
-sudo mv /home/$USER/lc-cd/lc-cd-cuts-list /usr/bin/
-sudo mv /home/$USER/lc-cd/lc-cd-cuts-global-echo /usr/bin/
+sudo mv /home/batan/lc-cd/lc-cd-cuts-list /usr/bin/
+sudo mv /home/batan/lc-cd/lc-cd-cuts-global-echo /usr/bin/
 sudo chmod a+x /usr/bin/lc-cd-cuts-list
 sudo chmod a+x /usr/bin/lc-cd-cuts-global-echo
-sudo mv /home/$USER/lc-cd/lc-cd /home/$USER/.lc-cd
+sudo mv /home/batan/lc-cd/lc-cd /home/batan/.lc-cd
 clear
-abc=$(cat /home/$USER/.bashrc|grep "# TEST #")
+abc=$(cat /home/batan/.bashrc|grep "# TEST #")
 if [[ -z "$abc" ]]; then
-cat /home/$USER/lc-cd/echo_bashrc >> /home/$USER/.bashrc
+cat /home/batan/lc-cd/echo_bashrc >> /home/batan/.bashrc
 else
 clear
 echo -e "\033[32mYour \033[31mbashrc\033[32m has been already modified\033[0m"
 fi
 read -e -p 'remove the klutter?   >>>   Y/N ' -i 'Y' bcd
 if [[ "$bcd" == Y ]]; then
-sudo trash /home/$USER/lc-cd/
+sudo trash /home/batan/lc-cd/
 clear
 echo -e "DONE"
 exit 0
