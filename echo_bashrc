@@ -1,0 +1,9 @@
+###   Setup lc function   #######################################################
+unalias lc 2> /dev/null
+lc(){
+	local dest_dir=$(lc-cd-cuts-global-echo | fzf )
+	if [[ $dest_dir != '' ]];then
+		cd "$dest_dir"
+	fi
+}
+export -f lc > /dev/null
