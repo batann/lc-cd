@@ -14,19 +14,24 @@ sudo chmod a+x /usr/bin/lc-cd-cuts-list
 sudo chmod a+x /usr/bin/lc-cd-cuts-global-echo
 sudo mv /home/batan/lc-cd/lc-cd /home/batan/.lc-cd
 clear
-abc=$(cat /home/batan/.bashrc|grep "# TEST #")
+abc=$(cat /home/batan/.bashrc.aliases|grep "# TEST #")
 if [[ -z "$abc" ]]; then
-cat /home/batan/lc-cd/echo_bashrc >> /home/batan/.bashrc
-else
+cat /home/batan/lc-cd/echo_bashrc >> /home/batan/.bashrc.aliases
+sudo trash /home/batan/lc-cd
 clear
-echo -e "\033[32mYour \033[31mbashrc\033[32m has been already modified\033[0m"
-fi
-read -e -p 'remove the klutter?   >>>   Y/N ' -i 'Y' bcd
-if [[ "$bcd" == Y ]]; then
-sudo trash /home/batan/lc-cd/
-clear
-echo -e "DONE"
+echo -e "\033[47mScript run Succesfully\033[0m"
+echo -e "Modified \033[31m.bashrc.aliases\033[0m"
+echo -e "Moved \033[31mlc-cd-cuts-list \033[0mto\033[31m/usr/bin/ \033[0m "
+echo -e "Moved \033[31mlc-cd-cuts-global-echo \033[0mto \033[31m /usr/bin/ \033[0m"
+echo -e "Moved \033[31mlc-cd \033[0mto \033[31m $HOME \033[0m"
+read -n1 -p "Enter [ANY] to exit..." lol
 exit 0
 else
-exit 0
+clear
+echo -e "\033[47mScript run Succesfully\033[0m"
+echo -e "\033[32mYour \033[31m.bashrc.aliases \033[32m has been already modified\033[0m"
+echo -e "Moved \033[31mlc-cd-cuts-list \033[0mto\033[31m/usr/bin/ \033[0m "
+echo -e "Moved \033[31mlc-cd-cuts-global-echo \033[0mto \033[31m /usr/bin/ \033[0m"
+echo -e "Moved \033[31mlc-cd \033[0mto \033[31m $HOME \033[0m"
+read -n1 -p "Enter [ANY] to exit..." lol
 fi
