@@ -21,9 +21,9 @@ sudo trash /home/batan/lc-cd
 clear
 echo -e "\033[47mScript run Succesfully\033[0m"
 echo -e "Modified \033[31m.bashrc.aliases\033[0m"
-echo -e "Moved \033[31mlc-cd-cuts-list \033[0mto\033[31m/usr/bin/ \033[0m "
+echo -e "Moved \033[31mlc-cd-cuts-list \033[0m       to\033[31m /usr/bin/ \033[0m "
 echo -e "Moved \033[31mlc-cd-cuts-global-echo \033[0mto \033[31m /usr/bin/ \033[0m"
-echo -e "Moved \033[31mlc-cd \033[0mto \033[31m $HOME \033[0m"
+echo -e "Moved \033[31mlc-cd \033[0m                 to \033[31m $HOME/ \033[0m"
 read -n1 -p "Enter [ANY] to exit..." lol
 exit 0
 else
