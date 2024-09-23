@@ -3,7 +3,7 @@
 
 unalias lc 2> /dev/null
 lc(){
-	local dest_dir=$(lc-cd-cuts-global-echo | fzf )
+	local dest_dir=$(cat /home/batan/.lc-cd | fzf )
 	if [[ $dest_dir != '' ]];then
 		cd "$dest_dir"
 	clear
